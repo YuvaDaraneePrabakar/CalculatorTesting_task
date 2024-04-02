@@ -5,13 +5,13 @@ pipeline {
         
         stage('Build') {
             steps {
-                bat 'mvn clean install'
+                powershell 'mvn clean install'
             }
         }
 
         stage('Test') {
             steps {
-                bat 'mvn test'
+                powershell 'mvn test'
             }
         }
     }
