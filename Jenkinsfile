@@ -6,7 +6,7 @@ pipeline {
         stage('Build') {
             steps {
                 script{
-                powershell 'mvn clean install'
+                sh 'mvn clean install'
                 }
             }
         }
@@ -14,7 +14,7 @@ pipeline {
         stage('Test') {
             steps {
                 script{
-                powershell 'mvn test'
+                sh 'mvn test'
                 }
             }
         }
